@@ -5,7 +5,7 @@
 #include <Eigen/Dense>
 
 #include <log_macros.h>
-#include <sparse_solve.hpp>
+#include <sparse_solver.hpp>
 
 namespace ssolver {
     

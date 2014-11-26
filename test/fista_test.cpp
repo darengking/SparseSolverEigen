@@ -1,5 +1,5 @@
 #include <iostream>
-#include <sparse_solve.hpp>
+#include <sparse_solver.hpp>
 #include <fstream>
 
 using namespace ssolver;

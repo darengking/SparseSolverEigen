@@ -16,14 +16,14 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 INCLUDE_DIRECTORIES(include)
 
 # ----- Add library target -----
-ADD_LIBRARY(sparselinear STATIC src/sparse_solve.cpp)
+ADD_LIBRARY(ssolver STATIC src/sparse_solver.cpp)
 
 
 # ----- Testing -----
 ADD_EXECUTABLE(oscar_test test/oscar_test.cpp)
-target_link_libraries(oscar_test sparselinear)
+target_link_libraries(oscar_test ssolver)
 ADD_EXECUTABLE(fista_test test/fista_test.cpp)
-target_link_libraries(fista_test sparselinear)
+target_link_libraries(fista_test ssolver)
 
 # ----- Install -----
 #IF ( INSTALL_LIBS )

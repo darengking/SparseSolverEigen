@@ -1,6 +1,8 @@
 #include <iostream>
-#include <oscar.hpp>
+#include <sparse_solve.hpp>
 #include <fstream>
+
+using namespace ssolver;
 
 int read_matrix_from_file(std::string filename, Eigen::MatrixXd & matrix) 
 {

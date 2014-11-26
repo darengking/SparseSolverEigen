@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-PROJECT(oscar)
+PROJECT(SparseSolve)
 
 SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_MODULE_PATH})
 SET(CMAKE_CXX_FLAGS "-std=c++0x -O2 -g -Wall")
@@ -16,14 +16,14 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 INCLUDE_DIRECTORIES(include)
 
 # ----- Add library target -----
-ADD_LIBRARY(sparselinear STATIC src/oscar.cpp)
+ADD_LIBRARY(sparselinear STATIC src/sparse_solve.cpp)
 
 
 # ----- Testing -----
 ADD_EXECUTABLE(oscar_test test/oscar_test.cpp)
-target_link_libraries(oscar_test sparserl)
+target_link_libraries(oscar_test sparselinear)
 ADD_EXECUTABLE(fista_test test/fista_test.cpp)
-target_link_libraries(fista_test sparserl)
+target_link_libraries(fista_test sparselinear)
 
 # ----- Install -----
 #IF ( INSTALL_LIBS )
